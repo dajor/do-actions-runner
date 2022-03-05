@@ -15,6 +15,8 @@ RUN \
     && ./bin/installdependencies.sh \
     && chown -R actions ~actions
 
+RUN apt install python3.9-venv
+
 RUN add-apt-repository ppa:git-core/ppa -y \
     && apt-get update -y && apt-get install -y --no-install-recommends \
     build-essential git
